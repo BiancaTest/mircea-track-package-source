@@ -19,12 +19,12 @@ namespace MirceaTrackPackageSource
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IRuntimeTargetAppSyncFactory), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService)};
+            _ = new System.Type[]{typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IRuntimeTargetAppSyncFactory), typeof(UiPath.Core.Activities.API.ISystemService)};
         }
 
-        protected UiPath.UIAutomationNext.API.Contracts.IRuntimeTargetAppSyncFactory uiAutomation { get => serviceContainer.Resolve<UiPath.UIAutomationNext.API.Contracts.IRuntimeTargetAppSyncFactory>() ; }
-
         protected UiPath.Testing.API.ITestingService testing { get => serviceContainer.Resolve<UiPath.Testing.API.ITestingService>() ; }
+
+        protected UiPath.UIAutomationNext.API.Contracts.IRuntimeTargetAppSyncFactory uiAutomation { get => serviceContainer.Resolve<UiPath.UIAutomationNext.API.Contracts.IRuntimeTargetAppSyncFactory>() ; }
 
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>() ; }
     }
